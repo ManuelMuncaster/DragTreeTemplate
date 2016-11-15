@@ -8,15 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace DragTree 
 {
     public partial class Form1 : Form
     {
         // TODO - create an int variable to track currentRow,
+        int currentRow;
         // TODO - create a Stopwatch object called stopwatch (interval 400ms)
+        Stopwatch stopwatch;
         // TODO - create a timer on the form called lightTimer 
-
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +27,7 @@ namespace DragTree
         private void startButton_Click(object sender, EventArgs e)
         {
             // TODO - start the timer
-
+            lightTimer.Enabled = true;
         }
 
         private void lightTimer_Tick(object sender, EventArgs e)
